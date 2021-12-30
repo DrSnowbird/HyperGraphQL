@@ -13,4 +13,11 @@ This is v3.0.1, a fix to mitigate the Log4Shell vulnerability.
 This software has been developed and is maintained by Epeirogenic AB. It
 is released under Apache License 2.0. See [LICENSE.TXT](https://github.com/hypergraphql/hypergraphql/blob/master/LICENSE.TXT) for more infromation. 
 
-      
+# Related Projects
+* [UltraGraphQL-Upstream](https://git.rwth-aachen.de/i5/ultragraphql)
+* [HyberGraphQL-Upstream](https://github.com/hypergraphql/hypergraphql)
+* [HyberGraphQL](https://github.com/DrSnowbird/HyperGraphQL)
+* [UltraGraphQL](https://github.com/DrSnowbird/UltraGraphQL)
+* [HyberGraphQL-docker](https://github.com/DrSnowbird/HyperGraphQL-docker)
+* [UltraGraphQL-docker](https://github.com/DrSnowbird/UltraGraphQL-docker)
+
