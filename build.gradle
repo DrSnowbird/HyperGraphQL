@@ -2,16 +2,21 @@ buildscript {
     repositories {
         mavenLocal()
         mavenCentral()
+	maven {
+		url "https://plugins.gradle.org/m2/"
+	}
     }
 }
 
 plugins {
-    id "com.github.johnrengelman.shadow" version "6.1.0"
+    id "com.github.johnrengelman.shadow" version "7.1.0"
     id "io.freefair.lombok" version "6.3.0"
 }
 
 apply plugin: 'java'
 apply plugin: 'checkstyle'
+apply plugin: 'maven-publish'
+apply plugin: 'com.github.johnrengelman.shadow'
 
 group = 'org.hypergraphql'
 version = '3.0.1'
@@ -22,13 +27,15 @@ repositories {
 }
 
 ext {
-    graphqlVersion = '15.0' as String
-    jenaVersion = '3.8.0' as String
+    log4jVersion = '2.17.1'
+    graphqlVersion = '15.0'
+    jenaVersion = '4.2.0'
+    lombokVersion = '1.18.22'
 }
 dependencies {
 
-    compileOnly group: 'org.projectlombok', name:'lombok', version: '1.18.22'
-    annotationProcessor group: 'org.projectlombok', name:'lombok', version: '1.18.22'
+    compileOnly group: 'org.projectlombok', name:'lombok', version: lombokVersion
+    annotationProcessor group: 'org.projectlombok', name:'lombok', version: lombokVersion
 
     implementation group: 'com.graphql-java', name: 'graphql-java', version: graphqlVersion
 
@@ -36,19 +43,23 @@ dependencies {
     implementation group: 'org.apache.jena', name: 'jena', version: jenaVersion
     implementation group: 'org.apache.jena', name: 'jena-core', version: jenaVersion
     implementation group: 'org.apache.jena', name: 'jena-fuseki-embedded', version: '3.8.0'
+    //implementation group: 'org.apache.jena', name: 'jena-fuseki-main', version: jenaVersion
+    implementation group: 'org.apache.jena', name: 'jena-querybuilder', version: jenaVersion
 
-    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.16.0'
-    implementation group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: '2.16.0'
+    //implementation group: 'org.apache.logging.log4j', name: 'log4j-1.2-api', version: log4jVersion
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: log4jVersion
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: log4jVersion
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'
     implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.32'
 
-    implementation group: 'com.sparkjava', name: 'spark-core', version: '2.9.2'
+    implementation group: 'com.sparkjava', name: 'spark-core', version: '2.9.3'
     implementation group: 'com.sparkjava', name: 'spark-template-velocity', version: '2.7.1'
-    implementation group: 'com.sparkjava', name: 'spark-core', version: '2.9.2'
+
     implementation group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
+
     implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.11.869'
 
-    testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.5.11'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.11.2'
 
     testCompileOnly('org.apiguardian:apiguardian-api:1.1.2')
 
@@ -59,8 +70,8 @@ dependencies {
             'org.junit.jupiter:junit-jupiter-engine:5.8.2'
     )
 
-    testCompileOnly group: 'org.projectlombok', name:'lombok', version: '1.18.16'
-    testAnnotationProcessor group: 'org.projectlombok', name:'lombok', version: '1.18.16'
+    testCompileOnly group: 'org.projectlombok', name:'lombok', version: lombokVersion
+    testAnnotationProcessor group: 'org.projectlombok', name:'lombok', version: lombokVersion
 }
 
 checkstyle {
@@ -84,7 +95,7 @@ test {
 
 task execute(type:JavaExec) {
     systemProperty('hgql_version', project.version)
-    main = 'org.hypergraphql.Application'
+    main('org.hypergraphql.Application')
     classpath = sourceSets.main.runtimeClasspath
 
     if(project.hasProperty('a')){
@@ -95,7 +106,7 @@ task execute(type:JavaExec) {
 sourceSets {
     main {
         resources {
-            include '**/*.json', '**/*.xml', '**/*.vtl', '**/*.properties', '**/*.txt', '**/*.graphql'
+            include '**/*.json', '**/*.xml', '**/*.vtl', '**/*.properties', '**/*.txt', '**/*.graphql', '**/*.sparql', '**/*.ttl'
         }
     }
 }
