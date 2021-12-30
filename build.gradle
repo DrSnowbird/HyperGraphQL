@@ -42,8 +42,7 @@ dependencies {
     implementation group: 'org.apache.jena', name: 'jena-arq', version: jenaVersion
     implementation group: 'org.apache.jena', name: 'jena', version: jenaVersion
     implementation group: 'org.apache.jena', name: 'jena-core', version: jenaVersion
-    implementation group: 'org.apache.jena', name: 'jena-fuseki-embedded', version: '3.8.0'
-    //implementation group: 'org.apache.jena', name: 'jena-fuseki-main', version: jenaVersion
+    implementation group: 'org.apache.jena', name: 'jena-fuseki-main', version: jenaVersion
     implementation group: 'org.apache.jena', name: 'jena-querybuilder', version: jenaVersion
 
     //implementation group: 'org.apache.logging.log4j', name: 'log4j-1.2-api', version: log4jVersion
@@ -106,8 +105,9 @@ task execute(type:JavaExec) {
 sourceSets {
     main {
         resources {
-            include '**/*.json', '**/*.xml', '**/*.vtl', '**/*.properties', '**/*.txt', '**/*.graphql', '**/*.sparql', '**/*.ttl'
-        }
+            // include '**/*.json', '**/*.xml', '**/*.vtl', '**/*.properties', '**/*.txt', '**/*.graphql', '**/*.sparql', '**/*.ttl'
+            include '**/*.json', '**/*.xml', '**/*.vtl', '**/*.properties', '**/*.txt', '**/*.graphql'   
+     }
     }
 }
 

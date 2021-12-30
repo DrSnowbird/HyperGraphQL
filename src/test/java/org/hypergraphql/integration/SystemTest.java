@@ -8,7 +8,7 @@ import java.io.InputStream;
 import java.util.HashSet;
 import java.util.Set;
 import lombok.val;
-import org.apache.jena.fuseki.embedded.FusekiServer;
+import org.apache.jena.fuseki.main.FusekiServer;
 import org.apache.jena.query.DatasetFactory;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.ResourceFactory;
