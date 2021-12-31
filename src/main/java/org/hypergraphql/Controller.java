@@ -94,7 +94,9 @@ public class Controller {
         System.out.println("GraphQL server started at: http://localhost:" + config.getGraphqlConfig().port() + config.getGraphqlConfig().graphQLPath());
         System.out.println("GraphiQL UI available at: http://localhost:" + config.getGraphqlConfig().port() + config.getGraphqlConfig().graphiQLPath());
 
-        hgqlService = Service.ignite().port(config.getGraphqlConfig().port());
+        hgqlService = Service.ignite()
+                .ipAddress(config.getGraphqlConfig().host())
+                .port(config.getGraphqlConfig().port());
 
         // CORS
         before((request, response) -> {
