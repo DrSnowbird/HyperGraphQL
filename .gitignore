@@ -16,3 +16,7 @@ docs/_site/
 src/test/resources/TestServices/output/*.ttl
 out/
 *.class
+
+!gradle/
+!**build/libs/hypergraphql-3.0.2-exe.jar
+!**build/libs/hypergraphql-3.0.2.jar
