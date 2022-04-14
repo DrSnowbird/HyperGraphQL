@@ -18,10 +18,10 @@ HyperGraphQL is a [GraphQL](http://graphql.org) interface for querying and servi
    * [UltraGraphQL-Upstream](https://git.rwth-aachen.de/i5/ultragraphql)
    * [UltraGraphQL](https://github.com/DrSnowbird/UltraGraphQL)
    * [UltraGraphQL-docker](https://github.com/DrSnowbird/UltraGraphQL-docker)
-* HyerGrahQL:
-   * [HyberGraphQL-Upstream](https://github.com/hypergraphql/hypergraphql)
-   * [HyberGraphQL](https://github.com/DrSnowbird/HyperGraphQL)
-   * [HyberGraphQL-docker](https://github.com/DrSnowbird/HyperGraphQL-docker)
+* HyperGrahQL:
+   * [HyperGraphQL-Upstream](https://github.com/hypergraphql/hypergraphql)
+   * [HyperGraphQL](https://github.com/DrSnowbird/HyperGraphQL)
+   * [HyperGraphQL-docker](https://github.com/DrSnowbird/HyperGraphQL-docker)
 
 ### License note:
 This software has been developed and is maintained by Epeirogenic AB. It
