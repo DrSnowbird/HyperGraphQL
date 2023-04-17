@@ -6,8 +6,6 @@ queryTranslation\.txt
 \.idea/
 =======
 .idea/
-.gradle/
-build/
 *.iml
 
 _site/
@@ -17,6 +15,10 @@ src/test/resources/TestServices/output/*.ttl
 out/
 *.class
 
-!gradle/
-!**build/libs/hypergraphql-3.0.2-exe.jar
-!**build/libs/hypergraphql-3.0.2.jar
+#gradle/
+#!**build/libs/hypergraphql-3.0.*-exe.jar
+#!**build/libs/hypergraphql-3.0.*.jar
+#!**build/libs/hypergraphql-3.0.3-exe.jar
+#!**build/libs/hypergraphql-3.0.3.jar
+#!**gradle/wrapper/gradle-wrapper.jar
+

@@ -9,8 +9,8 @@ buildscript {
 }
 
 plugins {
-    id "com.github.johnrengelman.shadow" version "7.1.0"
-    id "io.freefair.lombok" version "6.3.0"
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+    id "io.freefair.lombok" version "8.0.1"
 }
 
 apply plugin: 'java'
@@ -19,7 +19,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.github.johnrengelman.shadow'
 
 group = 'org.hypergraphql'
-version = '3.0.2'
+version = '3.0.3'
 
 repositories {
     mavenLocal()
@@ -27,7 +27,7 @@ repositories {
 }
 
 ext {
-    log4jVersion = '2.17.1'
+    log4jVersion = '2.20.0'
     graphqlVersion = '15.0'
     jenaVersion = '4.2.0'
     lombokVersion = '1.18.22'
@@ -63,10 +63,10 @@ dependencies {
     testCompileOnly('org.apiguardian:apiguardian-api:1.1.2')
 
     testImplementation(
-            'org.junit.jupiter:junit-jupiter-api:5.8.2'
+        'org.junit.jupiter:junit-jupiter-api:5.8.2'
     )
     testRuntimeOnly(
-            'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+        'org.junit.jupiter:junit-jupiter-engine:5.8.2'
     )
 
     testCompileOnly group: 'org.projectlombok', name:'lombok', version: lombokVersion
@@ -114,8 +114,8 @@ sourceSets {
 shadowJar {
     zip64 = true
     exclude 'META-INF/*', 'META-INF/**', 'LICENSE', 'LICENSE/**', 'license', 'license/**'
-    //archiveClassifier.set("exe")
-    classifier = 'exe'
+    archiveClassifier.set("exe")
+    //classifier = 'exe'
     manifest {
         attributes("Main-Class": "org.hypergraphql.Application")
     }

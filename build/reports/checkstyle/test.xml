@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/util/LangUtilsTest.java">
+</file>
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/integration/SystemTest.java">
+</file>
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/demo/Demo.java">
+</file>
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/demo/ClasspathDemo.java">
+</file>
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/datafetching/SPARQLExecutionResultTest.java">
+</file>
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/query/converters/HGraphQLConverterTest.java">
+</file>
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/ControllerTest.java">
+</file>
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/config/system/FetchParamsTest.java">
+</file>
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/datamodel/HGQLSchemaWiringTest.java">
+</file>
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/services/HGQLQueryServiceTest.java">
+</file>
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/services/ApplicationConfigurationServiceTest.java">
+</file>
+<file name="/mnt/user1/DATA/git-public/RDF/HyperGraphQL/src/test/java/org/hypergraphql/services/S3ServiceTest.java">
+</file>
+</checkstyle>
