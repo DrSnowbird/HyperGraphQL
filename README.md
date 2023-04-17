@@ -1,4 +1,4 @@
-# <img src="https://www.hypergraphql.org/sources/front-diagram.svg" alt="diagram">[HyperGraphQL](docs/HyperGraphQL.png) HyperGraphQL
+# <img src="docs/HyperGraphQL.png" alt="diagram">HyperGraphQL
 * This is a fork with modifications from upstream hypergraphql/hybergraphql.
 * Note that this new release use Gradle v8.1. Please make sure that your Gradle is upgraded to at least v8.1 to work correctly.
 
