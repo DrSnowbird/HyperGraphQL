@@ -22,3 +22,4 @@ out/
 #!**build/libs/hypergraphql-3.0.3.jar
 #!**gradle/wrapper/gradle-wrapper.jar
 
+**tmp/
